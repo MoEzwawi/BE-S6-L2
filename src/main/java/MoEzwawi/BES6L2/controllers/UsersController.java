@@ -14,7 +14,7 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
     @GetMapping
-    public List<User> getUsers(){
+    public List<User> getAll(){
         return usersService.getUsers();
     }
     @GetMapping("/{id}")
@@ -29,6 +29,10 @@ public class UsersController {
     @PutMapping("/{id}")
     public User update(@PathVariable int id,@RequestBody User body){
         return usersService.findByIdAndUpdate(id, body);
+    }
+    @PatchMapping("/{id}")
+    public User patchUser(@PathVariable int id, @RequestBody User partialBody){
+        return this.usersService.patchUser(id,partialBody);
     }
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT) // status code 204

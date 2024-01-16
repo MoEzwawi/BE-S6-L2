@@ -1,7 +1,5 @@
 package MoEzwawi.BES6L2;
 
-import MoEzwawi.BES6L2.entities.BlogPost;
-import MoEzwawi.BES6L2.entities.enums.BlogPostCategory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

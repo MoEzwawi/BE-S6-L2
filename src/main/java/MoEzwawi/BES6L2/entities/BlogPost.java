@@ -10,14 +10,10 @@ import lombok.ToString;
 @ToString
 public class BlogPost {
     private int id;
-    private BlogPostCategory category;
     private String title;
+    private BlogPostCategory category;
     private String coverUrl;
     private String content;
     private int readingTime;
 
-    public BlogPost(BlogPostCategory category, String title) {
-        this.category = category;
-        this.title = title;
-    }
 }

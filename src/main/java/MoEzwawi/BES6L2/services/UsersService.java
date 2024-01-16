@@ -42,6 +42,15 @@ public class UsersService {
         found.setDateOfBirth(body.getDateOfBirth());
         return found;
     }
+    public User patchUser(int id, User partialBody){
+        User found = this.findById(id);
+        if(partialBody.getName()!=null) found.setName(partialBody.getName());
+        if(partialBody.getSurname()!=null) found.setSurname(partialBody.getSurname());
+        if(partialBody.getEmail()!=null) found.setEmail(partialBody.getEmail());
+        if(partialBody.getDateOfBirth()!=null) found.setDateOfBirth(partialBody.getDateOfBirth());
+        if(partialBody.getAvatarUrl()!=null) found.setAvatarUrl(partialBody.getAvatarUrl());
+        return found;
+    }
     public void findByIdAndDelete(int id){
         this.users.removeIf(current -> current.getId() == id);
     }
