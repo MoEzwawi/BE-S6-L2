@@ -1,5 +1,7 @@
 package MoEzwawi.BES6L2;
 
+import MoEzwawi.BES6L2.entities.BlogPost;
+import MoEzwawi.BES6L2.entities.enums.BlogPostCategory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BeS6L2Application {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(BeS6L2Application.class, args);
+		/*BlogPost b1 = new BlogPost(BlogPostCategory.SPRING_DATA,"CIAO");
+		String spCat = "SPRING4_DATA";
+		if(b1.getCategory().equals(BlogPostCategory.valueOf(spCat))){
+			System.err.println("CAMPIONIIIIIII");
+		}*/
 	}
 
 }

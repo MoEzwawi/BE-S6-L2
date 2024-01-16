@@ -13,6 +13,6 @@ public class User {
     private String name;
     private String surname;
     private String email;
-    private String dateOfBirth;
+    private LocalDate dateOfBirth;
     private String avatarUrl;
 }

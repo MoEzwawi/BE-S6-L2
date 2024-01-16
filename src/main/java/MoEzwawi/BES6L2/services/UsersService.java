@@ -26,6 +26,8 @@ public class UsersService {
         return found;
     }
     public User save(User body){
+        System.out.println("--------------SAVE------------");
+        System.out.println(body);
         Random rndm = new Random();
         body.setId(rndm.nextInt(100,999));
         body.setAvatarUrl("https://ui-avatars.com/api/?name="+body.getName()+"+"+body.getSurname());

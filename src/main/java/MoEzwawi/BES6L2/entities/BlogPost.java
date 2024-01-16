@@ -15,4 +15,9 @@ public class BlogPost {
     private String coverUrl;
     private String content;
     private int readingTime;
+
+    public BlogPost(BlogPostCategory category, String title) {
+        this.category = category;
+        this.title = title;
+    }
 }
